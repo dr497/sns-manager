@@ -45,9 +45,10 @@ import { I18nProvider } from "@lingui/react";
 import { messages as enMessages } from "./locales/en/messages";
 import { messages as krMessages } from "./locales/kr/messages";
 import { t } from "@lingui/macro";
+import { LanguageModal } from "./components/LanguageModal";
 
 i18n.load({ en: enMessages, kr: krMessages });
-i18n.activate("kr");
+i18n.activate("en");
 
 const Stack = createStackNavigator<RootBottomTabParamList>();
 
@@ -63,6 +64,7 @@ const modalConfig = {
   SearchModal: SearchModal,
   DiscountExplainerModal: DiscountExplainerModal,
   DomainSizeModal: DomainSizeModal,
+  LanguageModal: LanguageModal,
 };
 
 const stackModal = createModalStack(modalConfig);
